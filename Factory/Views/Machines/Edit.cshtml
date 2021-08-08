@@ -11,11 +11,9 @@
     @using (Html.BeginForm())
     {
       @Html.HiddenFor(model => model.MachineId)
-
       <p>Name:
         @Html.TextBoxFor(model => model.MachName, new { @required="required" })</p>
       <input type="submit" value="Save" class="btn btn-default">
-
     }
   </div>
   <div class="back">
