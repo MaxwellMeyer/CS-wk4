@@ -1,19 +1,32 @@
 @{
   Layout = "_Layout";
 }
+
 @using Factory.Models;
-<h1>Machines:</h1>
-<hr>
-@if (@Model.Count == 0)
-{
-  <p>No Machines found in our factory, Woops!!!.</p>
-}
-<ul>
-  @foreach (Machine machine in Model)
-  {
-    <li>@Html.ActionLink($"{machine.MachName}", "Details", new { id = machine.MachineId })</li>
-  }
-</ul>
-<hr>
-<p>@Html.ActionLink("Add a new Machine!", "Create")</p>
-<hr>
+@model List<Factory.Models.Machine>;
+<div class="mainCont">
+  <div class="head">
+    <h1>All of our MACHINES are very RELIABLE, and incredibly PRODUCTIVE </h1>
+  </div>
+  <div class="content">
+    @if (@Model.Count == 0)
+    {
+      <p>No Machines yet, woopsies!!</p>
+    }
+    <div class="subhead">
+      <h3>Feast your eyes on these bad bois:</h3>
+    </div>
+    @foreach (Machine machine in Model)
+    {
+      <div class="listo">
+        <li>@Html.ActionLink($"{machine.MachName}", "Details", new { id = machine.MachineId })</li>
+      </div>
+    }
+    <div class="create">
+      <h3>Missing Something..?</h3>
+      <div class="c-link">
+        <p>@Html.ActionLink("BUY a new MACHINE", "Create")</p>
+      </div>
+    </div>
+  </div>
+</div>
