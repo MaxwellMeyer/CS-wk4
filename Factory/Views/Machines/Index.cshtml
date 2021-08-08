@@ -13,9 +13,12 @@
     {
       <p>No Machines yet, woopsies!!</p>
     }
-    <div class="subhead">
-      <h3>Feast your eyes on these machines:</h3>
-    </div>
+    else
+    {
+      <div class="subhead">
+        <h3>Feast your eyes on these machines:</h3>
+      </div>
+    }
     @foreach (Machine machine in Model)
     {
       <div class="listo">
