@@ -3,19 +3,23 @@
 }
 
 @model Factory.Models.Engineer
+<div class="mainCont">
+  <div class="head">
+    <h1>Register a Machine to @Html.DisplayFor(model => model.EngName)</h1>
+  </div>
+  @using (Html.BeginForm())
+  {
+    <div class="content">
+      @Html.HiddenFor(model => model.EngineerId)
 
-<h1>Register a Machine to @Html.DisplayFor(model => model.EngName)</h1>
-
-<hr>
-
-@using (Html.BeginForm())
-{
-  @Html.HiddenFor(model => model.EngineerId)
-
-  @Html.Label("Select Machine")
-  @Html.DropDownList("MachineId")
-
-  <input type="submit" value="Save" />
-}
-
-<p>@Html.ActionLink("Back to Engineers List", "Index")</p>
+      @Html.Label("Select Machine")
+      @Html.DropDownList("MachineId")
+      <div class="back">
+        <input type="submit" value="Save" />
+      </div>
+    </div>
+  }
+  <div class="back">
+    <p>@Html.ActionLink("Back to Engineers List", "Index")</p>
+  </div>
+</div>

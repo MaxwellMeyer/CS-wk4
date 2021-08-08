@@ -3,28 +3,23 @@
 }
 
 @model Factory.Models.Engineer
-
-<h1>Edit</h1>
-
-<hr>
-
-<p>Edit Engineer: @Html.DisplayFor(model => model.EngName)</p>
-
-@using (Html.BeginForm())
-{
-  @Html.HiddenFor(model => model.EngineerId)
-
-  <p>Name:
-  @Html.TextBoxFor(model => model.EngName, new { @required="required" })</p>
-
-  @Html.Label("Add new Machine")
-  @Html.DropDownList("MachineId")
-
-  <input type="submit" value="Save" class="btn btn-default">
-}
-
-<hr>
-
-<p>@Html.ActionLink("Back to List of our Engineers", "Index")</p>
-
-<hr>
+<div class="mainCont">
+  <div class="head">
+    <h1>Edit</h1>
+  </div>
+  <div class="content">
+    <p>Edit Engineer: @Html.DisplayFor(model => model.EngName)</p>
+    @using (Html.BeginForm())
+    {
+      @Html.HiddenFor(model => model.EngineerId)
+      <p>Name:
+        @Html.TextBoxFor(model => model.EngName, new { @required="required" })</p>
+      @Html.Label("Add new Machine")
+      @Html.DropDownList("MachineId")
+      <input type="submit" value="Save" class="btn btn-default">
+    }
+  </div>
+  <div class="back">
+    <p>@Html.ActionLink("Back to List of our Engineers", "Index")</p>
+  </div>
+</div>
