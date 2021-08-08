@@ -3,15 +3,21 @@
 }
 
 @model Factory.Models.Machine
-<h1>Install a new Machine:</h1>
-<hr>
-@using (Html.BeginForm())
-{
-  <p>@Html.Label("Enter new Machine Name:")
-  @Html.TextBoxFor(model => model.MachName, new { @required="required" })</p>
-
-  <input type="submit" value="Install new Machine" class="btn btn-default">
-}
-<hr>
-<p>@Html.ActionLink("Back to all Machines", "Index")</p>
-<hr>
+<div class="mainCont">
+  <div class="head">
+    <h1>Install a new Machine:</h1>
+  </div>
+  @using (Html.BeginForm())
+  {
+    <div class="content">
+      <p>@Html.Label("Enter new Machine Name:")
+        @Html.TextBoxFor(model => model.MachName, new { @required="required" })</p>
+      <div class="back">
+        <input type="submit" value="Install new Machine" class="btn btn-default">
+      </div>
+    </div>
+  }
+  <div class="back">
+    <p>@Html.ActionLink("Back to all Machines", "Index")</p>
+  </div>
+</div>

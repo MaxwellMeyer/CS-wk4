@@ -2,13 +2,23 @@
   Layout = "_Layout";
 }
 @model Factory.Models.Machine
-<h1>Remove Machine</h1>
-<hr>
-<p>Are you ABSOLUTELY sure you want to delete @Html.DisplayFor(model => model.MachName)?</p>
-@using (Html.BeginForm())
-{
-  <input type="submit" value="Delete" class="btn btn-default">
-}
-<hr>
-@Html.ActionLink("Back", "Index")
-<hr>
+<div class="mainCont">
+  <div class="head">
+    <h1>Edit</h1>
+  </div>
+  <div class="content">
+    <p>Edit @Html.DisplayFor(model => model.MachName)?</p>
+    @using (Html.BeginForm())
+    {
+      @Html.HiddenFor(model => model.MachineId)
+
+      <p>Name:
+        @Html.TextBoxFor(model => model.MachName, new { @required="required" })</p>
+      <input type="submit" value="Save" class="btn btn-default">
+
+    }
+  </div>
+  <div class="back">
+    @Html.ActionLink("Back", "Index")
+  </div>
+</div>

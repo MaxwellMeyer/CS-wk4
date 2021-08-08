@@ -3,13 +3,18 @@
 }
 
 @model Factory.Models.Machine
-<h1>Delete This Machine</h1>
-<hr>
-<p>Are you TOTALLY sure you want to delete @Html.DisplayFor(model => model.MachName)?</p>
-@using (Html.BeginForm())
-{
-  <input type="submit" value="Delete" class="btn btn-default">
-}
-<hr>
-@Html.ActionLink("Back to the List", "Index")
-<hr>
+<div class="mainCont">
+  <div class="head">
+    <h1>Delete This Machine</h1>
+  </div>
+  <div class="content">
+    <p>Are you TOTALLY sure you want to delete @Html.DisplayFor(model => model.MachName)?</p>
+    @using (Html.BeginForm())
+    {
+      <input type="submit" value="Delete" class="btn btn-default">
+    }
+  </div>
+  <div class="back">
+    @Html.ActionLink("Back to the List", "Index")
+  </div>
+</div>
