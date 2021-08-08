@@ -1,0 +1,83 @@
+body {
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  color: rgb(255, 0, 200);
+  text-shadow: 1px 1px red;
+  background: linear-gradient(to bottom, rgb(0, 0, 245), rgb(0, 47, 255), cyan);
+}
+
+#footer {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  color: rgb(40, 2, 255);
+  text-shadow: 1px 1px red;
+  background: #333;
+  padding: 8px;
+  background: linear-gradient(to bottom, rgb(0, 162, 255), greenyellow);
+  opacity: 0.5;
+}
+
+.sidenav {
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 160px;
+  padding-left: 50px;
+  opacity: 1;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+.sidenav:hover {
+  opacity: 0.85;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.head {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.mainCont {
+  padding-left: 240px;
+}
+
+.content {
+  padding-top: 60px;
+}
+
+.create {
+  padding-top: 150px;
+}
+
+.c-link {
+  padding-top: 20px;
+}
+
+.listo {
+  list-style-type: none;
+  padding-top: 20px;
+}

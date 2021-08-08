@@ -10,8 +10,8 @@
 
 <body>
   <div class="container">
+    @Html.Partial("_Sidebar")
     @RenderBody()
-    <p>@Html.ActionLink("Home", "Index", "Home")</p>
     @Html.Partial("_Footer")
   </div>
 </body>
