@@ -4,23 +4,29 @@
 
 @using Factory.Models;
 @model List<Factory.Models.Engineer>;
-
-<h1>Our Engineers...</h1>
-
-<hr>
-
-@if (@Model.Count == 0)
-{
-  <p>No Engineers yet, woopsies!!</p>
-}
-
-@foreach (Engineer engineer in Model)
-{
-  <li>@Html.ActionLink($"{engineer.EngName}", "Details", new { id = engineer.EngineerId })</li>
-}
-
-<hr>
-
-<p>@Html.ActionLink("Add a new Engineer!?", "Create")</p>
-
-<hr>
+<div class="mainCont">
+  <div class="head">
+    <h1>We most definitely ONLY employ the FINEST, most SKILLED ENGINEERS in all of the land...</h1>
+  </div>
+  <div class="content">
+    @if (@Model.Count == 0)
+    {
+      <p>No Engineers yet, woopsies!!</p>
+    }
+    <div class="subhead">
+      <h3>Browse our current Engineers:</h3>
+    </div>
+    @foreach (Engineer engineer in Model)
+    {
+      <div class="listo">
+        <li>@Html.ActionLink($"{engineer.EngName}", "Details", new { id = engineer.EngineerId })</li>
+      </div>
+    }
+    <div class="create">
+      <h3>Missing Someone?</h3>
+      <div class="c-link">
+        <p>@Html.ActionLink("HIRE a new ENGINEER", "Create")</p>
+      </div>
+    </div>
+  </div>
+</div>
