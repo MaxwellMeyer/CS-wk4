@@ -4,7 +4,12 @@ body {
   height: 100vh;
   color: rgb(255, 0, 200);
   text-shadow: 1px 1px red;
-  background: linear-gradient(to bottom, rgb(0, 0, 245), rgb(0, 47, 255), cyan);
+  background: linear-gradient(
+    to bottom,
+    rgb(0, 0, 245),
+    rgb(0, 47, 255),
+    rgb(0, 98, 255)
+  );
 }
 
 #footer {
@@ -76,7 +81,10 @@ body {
 .c-link {
   padding-top: 20px;
 }
-
+li,
+ul {
+  list-style-type: none;
+}
 .listo {
   list-style-type: none;
   padding-top: 20px;
